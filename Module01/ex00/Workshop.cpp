@@ -42,7 +42,7 @@ void Workshop::unregisterWorker(std::size_t worker_id)
     }
 }
 
-std::size_t Workshop::getToolType() const
+std::size_t Workshop::getRequireTool() const
 {
     return tool_id;
 }
@@ -54,4 +54,10 @@ std::size_t Workshop::getWorker(std::size_t worker_id)
         return *it;
     return -1;
 }
+
+void Workshop::update() const
+{    
+    std::cout << "Workshop with " << (tool_id == ToolType::Hammer ? "Hummer" : "Shovel") << " updates workers" << std::endl;
+}
+
 

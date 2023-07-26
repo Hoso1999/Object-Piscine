@@ -52,19 +52,10 @@ void                Worker::work()
     {
         if (*it)
         {
-            std::string workshopType = ((*it)->getToolType() == ToolType::Hammer) ? "Hammer" : "Shovel";
+            (*it)->update();
+            std::string workshopType = ((*it)->getRequireTool() == ToolType::Hammer) ? "Hammer" : "Shovel";
             std::cout << "Worker " << id << " works with " << workshopType << " in Workshop " << (*it)->getID() << std::endl;
-            tools->getTool((*it)->getToolType())->use(id);
+            tools->getTool((*it)->getRequireTool())->use(id);
         }
     }
-}
-
-Tool* Worker::getTool(std::size_t tool_id) const
-{
-    ToolManager* manager = ToolManager::getToolManager();
-    std::set<Tool*> worker_tools = manager->getToolsByWorkerID(id);
-    std::set<Tool*>::iterator first_tool = worker_tools.find(manager->getTool(tool_id));
-    if (first_tool != worker_tools.end())
-        return *first_tool;
-    return NULL;
 }

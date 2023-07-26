@@ -7,7 +7,7 @@
 
 namespace ToolType
 {
-    enum
+    enum ToolType
     {
         Hammer,
         Shovel

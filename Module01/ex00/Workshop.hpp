@@ -7,6 +7,9 @@
 
 class Workshop
 {
+    /*
+    * used singletons instead of observers for avoid cyclic dependency between Worker and Workshop 
+    */
     private:
         static std::size_t      unique_id;
         std::size_t             id;
@@ -18,7 +21,9 @@ class Workshop
         void        registerWorker(std::size_t worker_id);
         void        unregisterWorker(std::size_t worker_id);
         std::size_t getWorker(std::size_t worker_id);
-        std::size_t getToolType() const;
+        std::size_t getRequireTool() const;
+        void        update() const;
+
 };
 
 #endif

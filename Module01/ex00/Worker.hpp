@@ -3,8 +3,7 @@
 
 #include "Info.hpp"
 #include <cstddef>
-
-class Tool;
+#include "ToolManager.hpp"
 
 class Worker
 {
@@ -23,7 +22,19 @@ class Worker
         * I think its bad solution
         * TODO: find better solution for this
         */
-        Tool*               getTool(std::size_t tool_id) const;
+        template<typename tooltype>
+        Tool*               getTool() const
+        {
+                ToolManager* manager = ToolManager::getToolManager();
+                std::set<Tool*> worker_tools = manager->getToolsByWorkerID(id);
+                for (std::set<Tool*>::iterator it = worker_tools.begin(); it != worker_tools.end(); ++it)
+                {
+                    tooltype* tool = dynamic_cast<tooltype*>(*it);
+                    if (tool)
+                        return tool;
+                }
+                return NULL;
+        }
         void                setStatistic(const Statistic& p_stat);
         void                work();
 };

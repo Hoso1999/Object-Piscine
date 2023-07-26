@@ -43,6 +43,9 @@ int main() try
     worker2->work();
     worker3->work();
     worker4->work();
+    Tool* w = worker0->getTool<Shovel>();
+    if (w)
+        std::cout << "worker have tool Shovel\n";
     return 0;
 }
 catch(const std::exception& ex)

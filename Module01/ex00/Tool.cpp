@@ -55,7 +55,7 @@ void Tool::unregisterWorker(std::size_t worker_id)
     std::set<Workshop*> registered_workshops = WorkshopManager::getWorkshopManager()->getWorkshopsByWorkerID(worker_id);
     for (std::set<Workshop*>::iterator it = registered_workshops.begin(); it != registered_workshops.end(); ++it)
     {
-        if (*it && (*it)->getToolType() == id)
+        if (*it && (*it)->getRequireTool() == id)
            (*it)->unregisterWorker(worker_id);
     }
     workers.erase(worker_id);

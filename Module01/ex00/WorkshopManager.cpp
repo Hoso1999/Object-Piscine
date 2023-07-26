@@ -34,7 +34,7 @@ std::set<Workshop*> WorkshopManager::getWorkshopsByType(std::size_t tool_id)
 {
     std::set<Workshop*> found_workshops;
    for (std::map<std::size_t, Workshop*>::const_iterator it = workshops.begin(); it != workshops.end(); ++it)
-        if (it->second && it->second->getToolType() == tool_id)
+        if (it->second && it->second->getRequireTool() == tool_id)
             found_workshops.insert(it->second);
    return found_workshops;
 }
@@ -61,7 +61,7 @@ WorkshopManager::~WorkshopManager()
     {
         if (it->second)
         {
-            std::cout << "Deleting Workshop " << it->second->getID() << " with tool " << (it->second->getToolType() == ToolType::Hammer ? "Hammer" : "Shovel") << std::endl;
+            std::cout << "Deleting Workshop " << it->second->getID() << " with tool " << (it->second->getRequireTool() == ToolType::Hammer ? "Hammer" : "Shovel") << std::endl;
             delete it->second;
         }
 
