@@ -13,13 +13,13 @@ int main(int argc, char const *argv[]) try
     bool isPrint = false;
     std::string saveFilePath = "";
     std::string loadFilePath = "";
-    Graph gr(Vector2(1000, 1200));
+    Graph gr(Vector2(800, 600));
     gr.addPoint(Vector2(50, 800));
     gr.addPoint(Vector2(2, 2));
     gr.addPoint(Vector2(32, 20));
     gr.addPoint(Vector2(95, 50));
     // gr.addPoint(Vector2(20, 5));
-    gr.addLine(Vector2(0, 0), Vector2(1000, 1200));
+    gr.addLine(Vector2(0, 0), Vector2(800, 600));
     // gr.printToConsole();
     while (++argv && *argv)
     {

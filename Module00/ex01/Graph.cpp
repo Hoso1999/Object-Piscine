@@ -69,8 +69,8 @@ void Graph::drawLines()
 {
     for (std::vector<std::pair<Vector2, Vector2> >::const_iterator it = m_lines.begin(); it != m_lines.end(); ++it) {
         sf::VertexArray lines(sf::Lines);
-        lines.append(sf::Vertex(sf::Vector2f(it->first.getX(), it->first.getY()), sf::Color::Blue));
-        lines.append(sf::Vertex(sf::Vector2f(it->second.getX(), it->second.getY()), sf::Color::Blue));
+        lines.append(sf::Vertex(sf::Vector2f(it->first.getX(), it->first.getY()), sf::Color::White));
+        lines.append(sf::Vertex(sf::Vector2f(it->second.getX(), it->second.getY()), sf::Color::White));
         m_texture.draw(lines);
     }
 }
