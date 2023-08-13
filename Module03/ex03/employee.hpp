@@ -26,6 +26,9 @@ class Apprentice : public Employee
         void addSchoolHour(int) {}
         int executeWorkday()
         {
+            /*
+            * Implemenation for Apprentice
+            */
             return 9;
         }
 };

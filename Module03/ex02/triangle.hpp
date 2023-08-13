@@ -2,7 +2,6 @@
 #define __Triangle_HPP__
 
 #include "shape.hpp"
-#include <iostream>
 
 class Triangle : public Shape
 {
@@ -11,12 +10,16 @@ class Triangle : public Shape
 
         void area()
         {
-            std::cout << "Calculate Radius of Triangle" << std::endl;
+            /*
+            * Area implementation for Triangle
+            */
         }
 
         void perimiter()
         {
-            std::cout << "Calculate Radius of Triangle" << std::endl;
+            /*
+            * Perimiter implementation for Triangle
+            */
         }
 
 };

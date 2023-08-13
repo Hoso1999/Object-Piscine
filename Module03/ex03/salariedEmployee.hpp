@@ -14,6 +14,9 @@ class ContractEmployee : public Employee
         void addNonWorkHour(int) {}
         int executeWorkday()
         {
+            /*
+            * Implemenation for ContractEmployee
+            */
             return 7;
         }
 };

@@ -14,6 +14,5 @@ int main(int argc, char const *argv[])
     circle.perimiter();
     rect.area();
     rect.perimiter();
-    /* code */
     return 0;
 }

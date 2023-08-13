@@ -17,6 +17,9 @@ class TempWorker : public Employee
         void addMobilizationHour(int) {}
         int executeWorkday()
         {
+            /*
+            * Implemenation for TempWorker
+            */
             return 6;
         }
 };

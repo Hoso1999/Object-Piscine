@@ -2,7 +2,6 @@
 #define __CIRCLE_HPP__
 
 #include "shape.hpp"
-#include <iostream>
 
 class Circle : public Shape
 {
@@ -11,12 +10,16 @@ class Circle : public Shape
 
         void area()
         {
-            std::cout << "Calculate Radius of Circle" << std::endl;
+            /*
+            * Area implementation for Circle
+            */
         }
 
         void perimiter()
         {
-            std::cout << "Calculate Radius of Circle" << std::endl;
+            /*
+            * Perimiter implementation for Circle
+            */
         }
 
 };

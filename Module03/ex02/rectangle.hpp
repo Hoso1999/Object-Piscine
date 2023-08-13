@@ -2,7 +2,6 @@
 #define __RECTANGLE_HPP__
 
 #include "shape.hpp"
-#include <iostream>
 
 class Rectangle : public Shape
 {
@@ -11,12 +10,16 @@ class Rectangle : public Shape
 
         void area()
         {
-            std::cout << "Calculate Radius of Rectangle" << std::endl;
+            /*
+            * Area implementation for Rectangle
+            */
         }
 
         void perimiter()
         {
-            std::cout << "Calculate Radius of Rectangle" << std::endl;
+            /*
+            * Perimiter implementation for Rectangle
+            */
         }
 
 };
